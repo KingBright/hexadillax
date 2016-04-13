@@ -32,9 +32,9 @@ title: categories
 ---
 ```
 
-### DUOSHUO
+### DISQUS
 
-Register your own [duoshuo](http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d) account and replace `duoshuo short_name` in `_config.yml`.
+Create your own [DISQUS](https://publishers.disqus.com/) for your site and replace `disqus short_name` in `_config.yml`.
 
 ### 百度统计
 

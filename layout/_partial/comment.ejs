@@ -1,18 +1,24 @@
 <section class="comment">
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="<%= config.root %><%= page.path %>" data-title="<%= page.title %>" data-url="<%= config.url %><%= config.root %><%= page.path %>"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"<%= theme.duoshuo.short_name %>"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
+    <div id="disqus_thread"></div>
+    <script>
+        var short_name = "<%= theme.disqus.short_name %>";
+        var url = "<%= config.url %> <%= config.root %> <%= page.path %>";
+        var id = "<%= config.root %> <%= page.path %>";
+        var title = "<%= page.title %>";
+//        var disqus_config = function () {
+//            this.page.url = url;
+//            this.page.identifier = id;
+//            this.page.title = title;
+//        }
+        (function () {
+            var d = document, s = d.createElement('script');
+
+            s.src = '//' + short_name + '.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+            powered by Disqus.</a></noscript>
 </section>
