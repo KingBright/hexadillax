@@ -34,8 +34,7 @@ if (page.category) {
 
                     <div class="say-title">
                         <p>
-                            —— <img src="<%- theme.avatar %>" class="img-circle index-post-avatar"/>
-                            <a href="<%- config.url %>" target="_blank"
+                            —— <a href="<%- config.url %>" target="_blank"
                                title="<%- config.author %>"><%- config.author %></a>
                             于<%- item.date.format(config.date_format) %>自豪地
                             <% if(item.tags && item.tags.length){ %>

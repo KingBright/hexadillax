@@ -39,9 +39,8 @@ if (page.archive) {
                     <% } %>
                     <div class="say-title">
                         <p>
-                            —— <img src="<%- theme.avatar %>" class="img-circle index-post-avatar"/>
-                            <a href="<%- config.url %>" target="_blank"
-                               title="<%- config.author %>"><%- config.author %></a>
+                            —— <a href="<%- config.url %>" target="_blank"
+                                 title="<%- config.author %>"><%- config.author %></a>
                             于<%- item.date.format(config.date_format) %>自豪地
                             <% if(item.tags && item.tags.length){ %>
                             以 <%- list_tags(item.tags, {show_count: false, class: 'article-tag', style: ""}) %>
