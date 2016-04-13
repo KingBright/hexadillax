@@ -1,6 +1,6 @@
 # HeXadillaX
 
-It's another version of `GhoSadillaX`, the theme of `Ghost`.
+This is a modified version of [XadillaX/hexadillax](https://github.com/XadillaX/hexadillax), of which the original author is Xadilla.
 
 ## Usage
 
