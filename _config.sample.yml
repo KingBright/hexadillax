@@ -14,8 +14,8 @@ background: [ 1.jpg, 2.jpg, 3.jpg ]
 avatar: /images/avatar.gif
 
 #### Comment
-duoshuo: 
-  short_name: YOUR_DUOSHUO_SHORT_NAME    ## duoshuo short name.
-                                         ## refer to http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d
+disqus:
+  short_name: YOUR_DISQUS_SHORT_NAME    ## disqus short name.
+                                         ## refer to https://publishers.disqus.com/
 
 rss: YOUR_RSS_ADDRESS                    ## if any...

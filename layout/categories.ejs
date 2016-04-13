@@ -12,18 +12,18 @@ page.category = ' ';
                 <% }); %>
             </div>
         </div>
-        
+
         <div class="all-list-box">
         </div>
     </div>
 </div>
-    
+
 <script>
 $(function() {
     var box = $('.all-list-box');
     var first = $('.category-title a:first-of-type');
     var list = $('.category-title a');
-    
+
     box.load(first.attr('data-src').toString() + ' #category-list-body');
     first.addClass('currentTag');
     list.each(function() {
