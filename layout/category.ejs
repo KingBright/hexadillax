@@ -21,7 +21,7 @@ if (page.category) {
             <% page.posts.each(function(item) { %>
             <article class="post">
                 <div class="jumbotron">
-                    <h2><a href="<%- config.root %> <%- item.path %>" title="<%- item.title %>"><%- item.title %></a>
+                    <h2><a href="<%- config.root %><%- item.path %>" title="<%- item.title %>"><%- item.title %></a>
                     </h2>
 
                     <% if(item.description){ %>

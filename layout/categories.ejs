@@ -28,7 +28,7 @@ $(function() {
     first.addClass('currentTag');
     list.each(function() {
         $(this).click(function() {
-            var listSrc = $(this).attr('data-src').toString() + ' #category-list-body';
+            var listSrc = $(this).attr('data-src').toString() + '#category-list-body';
             box.load(listSrc);
             list.removeClass('currentTag');
             $(this).addClass('currentTag');
