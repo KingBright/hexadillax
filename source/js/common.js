@@ -38,7 +38,7 @@ $(function () {
         if (localStorage) {
             var startDate = localStorage.getItem("start_time");
             var endDate = localStorage.getItem("end_time");
-            if (startDate == today || endDate == today) {
+            if (endDate == today) {
                 var imageUrl = localStorage.getItem("image_url");
                 if (imageUrl) {
                     $.backstretch(imageUrl);
@@ -62,7 +62,7 @@ $(function () {
             }
             callback && callback(data);
         })
-    })("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1", function (data) {
+    })("https://www.bing.com/HPImageArchive.aspx?format=js&n=1&idx=0", function (data) {
         var json = JSON.parse(data);
         var images = json.images;
         if (!images || images.length == 0) {
