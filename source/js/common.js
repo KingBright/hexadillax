@@ -38,19 +38,24 @@ $(function () {
         if (localStorage) {
             var startDate = localStorage.getItem("start_time");
             var endDate = localStorage.getItem("end_time");
-            if (endDate == today) {
+            console.log("last time", startDate)
+            console.log("today", today);
+            if (startDate == today) {
                 var imageUrl = localStorage.getItem("image_url");
                 if (imageUrl) {
                     $.backstretch(imageUrl);
+                    console.log("use old", imageUrl);
                     return;
                 }
             }
         }
 
-        $.getJSON("http://query.yahooapis.com/v1/public/yql?" +
+        var finalUrl = "http://query.yahooapis.com/v1/public/yql?" +
             "q=select * from html where url='" +
             encodeURIComponent(target) +
-            "'&callback=?", function (response) {
+            "'&callback=?";
+        console.log("finalUrl", encodeURI(finalUrl));
+        $.getJSON(finalUrl, function (response) {
             var data = response;
             if (data.results) {
                 data = data.results[0];
@@ -78,9 +83,11 @@ $(function () {
         if (localStorage) {
             localStorage.setItem("start_time", startTime);
             localStorage.setItem("end_time", endTime);
+            console.log("save new", endTime);
             localStorage.setItem("image_url", imageUrl);
         }
         $.backstretch(imageUrl);
+        console.log("use new", imageUrl);
     });
 
     $("nav[role=banner]").headroom({

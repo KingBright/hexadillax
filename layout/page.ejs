@@ -19,8 +19,9 @@
         <div class="post-body-inner">
             <div id="toc" class="toc-article well">
                 <strong class="toc-title">大纲</strong>
-                <%- toc(page.content) %>
+                <%- toc(page.content, {list_number: false}) %>
             </div>
+
             <%- page.content %>
 
             <% if (page.mathjax){ %>

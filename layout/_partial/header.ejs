@@ -47,11 +47,7 @@ if (is_archive()) {
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
     <% if(theme.favicon) { %>
-    <link rel="icon" href="<%- config.root %> <%- theme.favicon %>">
-    <% } %>
-    <% if(theme.apple_icon) { %>
-    <link rel="apple-touch-icon" href="<%- config.root %> <%- theme.apple_icon %>">
-    <link rel="apple-touch-icon-precomposed" href="<%- config.root %> <%- theme.apple_icon %>">
+    <link rel="icon" href="<%- config.root %><%- theme.favicon %>">
     <% } %>
 
     <meta charset="utf-8">
@@ -74,7 +70,7 @@ if (is_archive()) {
     <!-- Javascript -->
     <script src="<%- config.root %>js/jquery-2.1.0.min.js"></script>
     <script src="<%- config.root %>js/jquery.backstretch.min.js"></script>
-    <script src="<%- config.root %>bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="<%- config.root %>bootstrap/js/bootstrap.min.js"></script>-->
     <script src="<%- config.root %>js/headroom.min.js"></script>
     <script src="<%- config.root %>js/jquery.headroom.min.js"></script>
     <script src="<%- config.root %>js/common.js"></script>
